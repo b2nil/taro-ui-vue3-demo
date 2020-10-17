@@ -65,11 +65,12 @@ const config = {
     }
   },
   h5: {
-    publicPath: '/',
+    publicPath: '/taro-ui-vue3-demo/',
     staticDirectory: 'static',
     esnextModules: ['taro-ui-vue3'],
     router: {
-      mode: 'browser'
+      mode: 'browser',
+      basename: '/taro-ui-vue3-demo/'
     },
     postcss: {
       autoprefixer: {
