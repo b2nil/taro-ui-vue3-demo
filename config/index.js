@@ -1,5 +1,67 @@
 const path = require('path')
 
+const customRoutes = {
+  '/pages/index/index': '/index',
+  '/pages/panel/index': '/panel',
+  // basic
+  '/pages/basic/icon/index': '/basic/icon',
+  '/pages/basic/button/index': '/basic/button',
+  '/pages/basic/color/index': '/basic/color',
+  '/pages/basic/typo/index': '/basic/typo',
+  // view
+  '/pages/view/noticebar/index': '/view/noticebar',
+  '/pages/view/badge/index': '/view/badge',
+  '/pages/view/tag/index': '/view/tag',
+  '/pages/view/avatar/index': '/view/avatar',
+  '/pages/view/article/index': '/view/article',
+  '/pages/view/timeline/index': '/view/timeline',
+  '/pages/view/swiper/index': '/view/swiper',
+  '/pages/view/load-more/index': '/view/load-more',
+  '/pages/view/divider/index': '/view/divider',
+  '/pages/view/countdown/index': '/view/countdown',
+  '/pages/view/steps/index': '/view/steps',
+  '/pages/view/curtain/index': '/view/curtain',
+  '/pages/action/toast/index': '/view/toast',
+  '/pages/action/modal/index': '/view/modal',
+  '/pages/action/progress/index': '/view/progress',
+  '/pages/action/action-sheet/index': '/view/action-sheet',
+  '/pages/action/swipe-action/index': '/view/swipe-action',
+  '/pages/action/activity-indicator/index': '/view/activity-indicator',
+  '/pages/action/message/index': '/view/message',
+  // navigation
+  '/pages/navigation/drawer/index': '/navigation/drawer',
+  '/pages/navigation/pagination/index': '/navigation/pagination',
+  '/pages/navigation/tabs/index': '/navigation/tabs',
+  '/pages/navigation/tabbar/index': '/navigation/tabbar',
+  '/pages/navigation/segmented-control/index': '/navigation/segmented-control',
+  '/pages/navigation/navbar/index': '/navigation/navbar',
+  '/pages/navigation/indexes/index': '/navigation/indexes',
+  // layout
+  '/pages/layout/flex/index': '/layout/flex',
+  '/pages/layout/grid/index': '/layout/grid',
+  '/pages/layout/float-layout/index': '/layout/float-layout',
+  '/pages/layout/card/index': '/layout/card',
+  '/pages/layout/list/index': '/layout/list',
+  '/pages/layout/accordion/index': '/layout/accordion',
+  // form
+  '/pages/form/form/index': '/form/form',
+  '/pages/form/checkbox/index': '/form/checkbox',
+  '/pages/form/input/index': '/form/input',
+  '/pages/form/input-number/index': '/form/input-number',
+  '/pages/form/radio/index': '/form/radio',
+  '/pages/form/textarea/index': '/form/textarea',
+  '/pages/form/switch/index': '/form/switch',
+  '/pages/form/rate/index': '/form/rate',
+  '/pages/form/picker/index': '/form/picker',
+  '/pages/form/picker-view/index': '/form/picker-view',
+  '/pages/form/slider/index': '/form/slider',
+  '/pages/form/search-bar/index': '/form/search-bar',
+  '/pages/form/image-picker/index': '/form/image-picker',
+  '/pages/form/range/index': '/form/range',
+  // advanced
+  '/pages/advanced/calendar/index': '/advanced/calendar',
+}
+
 const config = {
   projectName: 'taro-ui-vue3',
   date: '2020-10-17',
@@ -65,12 +127,22 @@ const config = {
     }
   },
   h5: {
-    publicPath: '/taro-ui-vue3-demo/',
+    publicPath: process.env.NODE_ENV === 'development' ? '/' : '/taro-ui-vue3-demo/',
     staticDirectory: 'static',
     esnextModules: ['taro-ui-vue3'],
+    output: {
+      filename: 'js/[name].[hash:8].js',
+      chunkFilename: 'js/[name].[chunkhash:8].js'
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
+    },
     router: {
       mode: 'browser',
-      basename: '/taro-ui-vue3-demo/'
+      basename: process.env.NODE_ENV === 'development' ? '/' : '/taro-ui-vue3-demo/',
+      customRoutes
     },
     postcss: {
       autoprefixer: {
@@ -88,10 +160,15 @@ const config = {
     },
     webpackChain(chain) {
       chain.resolve.alias
-        .set('@tarojs/components$', '@tarojs/components/dist-h5/vue3/index.js')
-        .set('taro-ui-vue3$', 'taro-ui-vue3/dist/index.esm.js')
-      // .set('@tarojs/components/dist/taro-components/taro-components.css', '@tarojs/components/dist/taro-components/taro-components.css')
-    },
+        .set(
+          '@tarojs/components$',
+          '@tarojs/components/dist-h5/vue3/index.js'
+        )
+        .set(
+          'taro-ui-vue3$',
+          'taro-ui-vue3/dist/index.esm.js'
+        )
+    }
   }
 }
 
