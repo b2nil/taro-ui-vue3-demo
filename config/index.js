@@ -164,10 +164,6 @@ const config = {
           '@tarojs/components$',
           '@tarojs/components/dist-h5/vue3/index.js'
         )
-        .set(
-          'taro-ui-vue3$',
-          'taro-ui-vue3/dist/index.esm.js'
-        )
     }
   }
 }
