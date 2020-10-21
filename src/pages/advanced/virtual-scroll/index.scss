@@ -1,4 +1,8 @@
-.virtuall-scroll-page {
-  margin-top: 20px;
-  text-align: center;
+.virtuall-scroll-page {  
+  .example-item__desc{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 24px;
+  }
 }

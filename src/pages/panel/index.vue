@@ -317,7 +317,7 @@ export default defineComponent({
           },
           {
             id: 'Virtual-Scroll',
-            name: '长列表 (Not Available Yet)'
+            name: '长列表'
           }
         ]
       },
