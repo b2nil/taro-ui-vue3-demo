@@ -140,7 +140,7 @@ const config = {
       },
     },
     router: {
-      mode: 'browser',
+      mode: 'hash',
       basename: process.env.NODE_ENV === 'development' ? '/' : '/taro-ui-vue3-demo/',
       customRoutes
     },
