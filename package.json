@@ -40,7 +40,7 @@
     "@tarojs/components": "3.0.14",
     "@tarojs/runtime": "3.0.14",
     "@tarojs/taro": "3.0.14",
-    "taro-ui-vue3": "^1.0.0-alpha.8",
+    "taro-ui-vue3": "^1.0.0-alpha.11",
     "vue": "^3.0.0-beta.15"
   },
   "devDependencies": {
