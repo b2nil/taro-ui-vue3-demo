@@ -60,6 +60,7 @@ const customRoutes = {
   '/pages/form/range/index': '/form/range',
   // advanced
   '/pages/advanced/calendar/index': '/advanced/calendar',
+  'pages/advanced/virtual-scroll/index': 'advanced/virtual-scroll',
 }
 
 const config = {
