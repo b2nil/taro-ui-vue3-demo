@@ -9167,10 +9167,10 @@ tar@^6.0.2:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-taro-ui-vue3@^1.0.0-alpha.10:
-  version "1.0.0-alpha.11"
-  resolved "https://registry.npm.taobao.org/taro-ui-vue3/download/taro-ui-vue3-1.0.0-alpha.11.tgz#785a751e3fb3a4112999b30025d5a8392943bec2"
-  integrity sha1-eFp1Hj+zpBEpmbMAJdWoOSlDvsI=
+taro-ui-vue3@^1.0.0-alpha.11:
+  version "1.0.0-alpha.12"
+  resolved "https://registry.npm.taobao.org/taro-ui-vue3/download/taro-ui-vue3-1.0.0-alpha.12.tgz#c3d8862f97415a0c7a2d8bde81459b7a63c5038e"
+  integrity sha1-w9iGL5dBWgx6LYvegUWbemPFA44=
   dependencies:
     "@babel/runtime" "^7.7.7"
     dayjs "^1.8.29"

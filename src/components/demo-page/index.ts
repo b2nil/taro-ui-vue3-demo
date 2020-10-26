@@ -1,4 +1,4 @@
-import { h, defineComponent, computed, mergeProps, PropType } from "vue"
+import { h, defineComponent, computed, mergeProps, PropType, onMounted, ref } from "vue"
 import { View, Text } from "@tarojs/components"
 import { AtFab } from "taro-ui-vue3"
 import Taro from "@tarojs/taro"
@@ -16,6 +16,8 @@ const Page = defineComponent({
   },
 
   setup(props, { slots, attrs }) {
+    const bottomHeight = ref(0)
+
     const rootClasses = computed(() => ({
       'page': true,
       [`${attrs.class}`]: Boolean(attrs.class)
@@ -29,6 +31,12 @@ const Page = defineComponent({
           margin: 'auto'
         }
         : null
+    })
+
+    onMounted(() => {
+      Taro.createSelectorQuery().select('#home').boundingClientRect(res => {
+        bottomHeight.value = res.height + 30
+      }).exec()
     })
 
     return () => (
@@ -57,10 +65,10 @@ const Page = defineComponent({
           h(NavBtn, {
             to: 'back',
             btnIcon: 'chevron-left',
-            style: { bottom: '110px' }
+            style: { bottom: `${bottomHeight.value}px` }
           }),
 
-          h(NavBtn, { to: 'home' })
+          h(NavBtn, { id: 'home', to: 'home' })
         ]
       })
     )
