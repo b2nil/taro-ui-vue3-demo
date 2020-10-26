@@ -3,6 +3,8 @@
 # build h5
 yarn build:h5
 
+cp src/assets/images/favicon.ico dist/h5/favicon.ico
+
 # cd to dist/h5
 cd dist/h5
 
