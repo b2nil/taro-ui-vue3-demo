@@ -62,6 +62,7 @@ const customRoutes = {
   // advanced
   '/pages/advanced/calendar/index': '/advanced/calendar',
   '/pages/advanced/virtual-scroll/index': '/advanced/virtual-scroll',
+  '/pages/advanced/skeleton/index': '/advanced/skeleton'
 }
 
 const config = {
