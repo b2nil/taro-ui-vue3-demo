@@ -46,7 +46,7 @@
 import { defineComponent, ref } from 'vue'
 import Taro from '@tarojs/taro'
 import { AtGrid } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/demo-page'
+import { Page, Panel, ExampleItem } from '@/components/index'
 
 export default defineComponent({
   name: "GridDemo",

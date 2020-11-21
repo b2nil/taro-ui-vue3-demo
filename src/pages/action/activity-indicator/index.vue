@@ -79,7 +79,7 @@
 import { defineComponent, ref } from "vue"
 import { AtActivityIndicator } from "taro-ui-vue3"
 import { AtSwitch } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 

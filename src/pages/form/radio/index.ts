@@ -2,7 +2,7 @@ import { h, defineComponent, reactive } from 'vue'
 import { AtRadio } from "taro-ui-vue3"
 import { RadioOption } from 'types/radio'
 import { View } from '@tarojs/components'
-import { Page, Panel } from '@/components/demo-page'
+import { Page, Panel } from '@/components/index'
 import './index.scss'
 
 interface IndexState {

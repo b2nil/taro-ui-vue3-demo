@@ -1,7 +1,7 @@
 import { h, defineComponent, reactive } from 'vue'
 import { AtRate } from "taro-ui-vue3"
 import { View } from '@tarojs/components'
-import { Page, Panel, ExampleItem } from '@/components/demo-page'
+import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 interface IndexState {

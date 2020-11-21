@@ -138,7 +138,7 @@ import { defineComponent, ref } from "vue"
 import { AtButton } from "taro-ui-vue3"
 import { AtIcon } from "taro-ui-vue3"
 import { AtProgress } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 

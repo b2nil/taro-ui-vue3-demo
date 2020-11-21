@@ -77,7 +77,7 @@
 import { defineComponent, reactive, toRefs, computed } from "vue"
 import Taro from "@tarojs/taro"
 import { AtBadge, AtButton, AtDrawer, AtIcon } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/demo-page'
+import { Page, Panel, ExampleItem } from '@/components/index'
 
 import "./index.scss"
 

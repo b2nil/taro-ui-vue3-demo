@@ -217,7 +217,7 @@ import Taro from '@tarojs/taro'
 
 import { AtForm } from "taro-ui-vue3"
 import { AtInput } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 import verificationCode from '@/assets/images/verification_code.png'
 import './index.scss'
 

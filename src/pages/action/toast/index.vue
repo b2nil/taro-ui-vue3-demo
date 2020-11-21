@@ -9,7 +9,8 @@
         <at-button @click="handleClick({ text: '文本内容' })">文本 Toast</at-button>
       </example-item>
       <example-item>
-        <at-button @click="handleClick({ text: '文本内容', icon: 'analytics' })">文本 + ICON</at-button>
+        <at-button @click="handleClick({ text: '文本内容', icon: 'analytics' })">文本
+          + ICON</at-button>
       </example-item>
     </panel>
 
@@ -90,7 +91,7 @@
 import { reactive, toRefs } from 'vue'
 import { AtButton } from "taro-ui-vue3"
 import { AtToast } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 

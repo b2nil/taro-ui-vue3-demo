@@ -1,7 +1,7 @@
 import { h, defineComponent, reactive } from 'vue'
 import { AtImagePicker } from "taro-ui-vue3"
 import Taro from '@tarojs/taro'
-import { Page, Panel, ExampleItem } from '@/components/demo-page'
+import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 type DogaImage = {

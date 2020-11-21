@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue"
-import { Page, Panel } from "@/components/demo-page"
+import { Page, Panel } from "@/components/index"
 
 import "./index.scss"
 

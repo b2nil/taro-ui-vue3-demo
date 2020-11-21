@@ -3,133 +3,118 @@
     class="virtual-scroll-page"
     header-title="VirtualScroll 虚拟列表"
   >
-    <panel title="功能展示">
+    <panel
+      title="功能展示"
+      style="padding: 0;"
+    >
       <template #controller>
         <at-card
-          style="margin: 15px;"
+          style="margin: 5px;"
           title="参数控制"
         >
           <example-item>
+            <at-flex justify="between">
+              <at-flex-item>
+                <prop-item
+                  prop="height"
+                  desc="组件的高度 (px)"
+                >
+                  <at-slider
+                    showValue
+                    :min="200"
+                    :max="500"
+                    :step="10"
+                    :value="height"
+                    @change="handleHeightChange"
+                  />
+                </prop-item>
+              </at-flex-item>
+              <at-flex-item
+                :size="4"
+                style="margin-left: 10px;"
+              >
+                <prop-item
+                  prop="bench"
+                  desc="提前渲染的行数"
+                >
+                  <at-input-number
+                    :min="0"
+                    :max="10"
+                    :step="1"
+                    :value="benched"
+                    @change="handleBenchChange"
+                  />
+                </prop-item>
+              </at-flex-item>
+            </at-flex>
+          </example-item>
+          <example-item>
             <at-flex justify="around">
               <at-flex-item>
-                <view
-                  class="example-item__desc"
-                  style="color: red;"
-                >bench</view>
+                <prop-item
+                  prop="itemHeight"
+                  desc="列表的行高 (px)"
+                >
+                  <at-slider
+                    showValue
+                    :min="48"
+                    :max="128"
+                    :step="1"
+                    :value="itemHeight"
+                    @change="handleItemHeightChange"
+                  />
+                </prop-item>
               </at-flex-item>
-              <at-flex-item>
-                <view
-                  class="example-item__desc"
-                  style="color: red;"
-                >viewport</view>
+              <at-flex-item
+                :size="4"
+                style="margin-left: 10px;"
+              >
+                <prop-item
+                  prop="onReachTop"
+                  desc="触顶事件"
+                >
+                  <at-switch
+                    style="padding: 0;"
+                    :title="`${reachTopOn ? '启用' : '禁用'}`"
+                    :checked="reachTopOn"
+                    @change="handleReachToOn"
+                  />
+                </prop-item>
               </at-flex-item>
             </at-flex>
+          </example-item>
+          <example-item>
             <at-flex justify="around">
               <at-flex-item>
-                <at-input-number
-                  :min="0"
-                  :max="10"
-                  :step="1"
-                  :value="benched"
-                  @change="handleBenchChange"
-                />
+                <prop-item
+                  prop="items.length"
+                  desc="列表总行数"
+                >
+                  <at-slider
+                    showValue
+                    :min="1"
+                    :max="150000"
+                    :step="1"
+                    :value="length"
+                    @change="handleLengthChange"
+                  />
+                </prop-item>
               </at-flex-item>
-              <at-flex-item>
-                <at-input-number
-                  :min="1"
-                  :max="10"
-                  :step="1"
-                  :value="viewportRows"
-                  @change="handleViewportChange"
-                />
-              </at-flex-item>
-            </at-flex>
-            <at-flex justify="around">
-              <at-flex-item is-wrap>
-                <view class="example-item__desc">* 可视区域外渲染的列表行数</view>
-              </at-flex-item>
-              <at-flex-item is-wrap>
-                <view class="example-item__desc">* 可视区域渲染的列表行数</view>
-              </at-flex-item>
-            </at-flex>
-          </example-item>
-          <example-item>
-            <at-flex>
               <at-flex-item
-                :size="3"
-                style="color: red;"
-              >height</at-flex-item>
-              <at-flex-item>
-                <at-slider
-                  showValue
-                  :min="200"
-                  :max="500"
-                  :step="10"
-                  :value="height"
-                  @change="handleHeightChange"
-                />
-
-              </at-flex-item>
-            </at-flex>
-            <view class="example-item__desc">* 长列表组件的高度, 用作 css 样式值</view>
-          </example-item>
-          <example-item>
-            <at-flex>
-              <at-flex-item
-                :size="3"
-                style="color: red;"
-              >itemHeight</at-flex-item>
-              <at-flex-item>
-                <at-slider
-                  showValue
-                  :min="48"
-                  :max="128"
-                  :step="1"
-                  :value="itemHeight"
-                  @change="handleItemHeightChange"
-                />
-              </at-flex-item>
-            </at-flex>
-            <view class="example-item__desc">* 显示列表单项的高度，单位为 px</view>
-          </example-item>
-          <example-item>
-            <at-flex>
-              <at-flex-item
-                :size="3"
-                style="color: red;"
-              >items.length</at-flex-item>
-              <at-flex-item>
-                <at-slider
-                  showValue
-                  :min="1"
-                  :max="150000"
-                  :step="1"
-                  :value="length"
-                  @change="handleLengthChange"
-                />
-              </at-flex-item>
-            </at-flex>
-            <view class="example-item__desc">* 列表长度</view>
-          </example-item>
-          <example-item>
-            <at-flex>
-              <at-flex-item>
-                <at-switch
-                  border
-                  style="margin-left: 0px;"
-                  title="onReachTop"
-                  :checked="reachTopOn"
-                  @change="handleReachToOn"
-                />
-              </at-flex-item>
-              <at-flex-item>
-                <at-switch
-                  border
-                  style="margin-left: 0px;"
-                  title="onReachBottom"
-                  :checked="reachBottomOn"
-                  @change="handleReachBottomOn"
-                />
+                :size="4"
+                style="margin-left: 10px;"
+              >
+                <prop-item
+                  prop="onReachBottom"
+                  desc="触底事件"
+                >
+                  <at-switch
+                    style="padding: 0;"
+                    :title="`${reachBottomOn ? '启用' : '禁用'}`"
+                    :checked="reachBottomOn"
+                    @change="handleReachBottomOn"
+                  />
+                </prop-item>
               </at-flex-item>
             </at-flex>
           </example-item>
@@ -141,7 +126,6 @@
       >
         <at-virtual-scroll
           :bench="benched"
-          :viewport="viewportRows"
           :height="height"
           :items="directoryItems"
           :scroll-into-item="toItem"
@@ -185,7 +169,8 @@
                       class="example-item__desc"
                       style="font-weight: bolder;"
                     >{{ item.fullName }}</view>
-                    <view class="example-item__desc">第 {{index+1}} 条/共 {{ length }} 条</view>
+                    <view class="example-item__desc">第 {{index+1}} 条/共
+                      {{ length }} 条</view>
                   </at-flex-item>
                   <at-flex-item :size="3">
                     <view class="example-item__desc">左滑看看</view>
@@ -225,7 +210,7 @@ import {
   AtSwipeAction,
   AtSearchBar,
 } from 'taro-ui-vue3'
-import { Page, Panel, ExampleItem } from '@/components/demo-page'
+import { Page, Panel, ExampleItem, PropItem } from '@/components/index'
 
 import Taro from '@tarojs/taro'
 
@@ -250,12 +235,12 @@ export default defineComponent({
     AtSearchBar,
     Page,
     Panel,
-    ExampleItem
+    ExampleItem,
+    PropItem
   },
 
   setup() {
     const benched = ref(5)
-    const viewportRows = ref(5)
     const length = ref(20)
     const itemHeight = ref(80)
     const height = ref(300)
@@ -344,10 +329,6 @@ export default defineComponent({
       height.value = value
     }
 
-    function handleViewportChange(value) {
-      viewportRows.value = value
-    }
-
     function handleReachTop() {
       if (reachTopOn.value) {
         Taro.showToast({
@@ -411,7 +392,6 @@ export default defineComponent({
       toItem,
       OPTIONS,
       benched,
-      viewportRows,
       length,
       height,
       itemHeight,
@@ -425,7 +405,6 @@ export default defineComponent({
       handleReachBottom,
       handleChange,
       handleActionClick,
-      handleViewportChange,
       handleReachToOn,
       handleReachBottomOn
     }

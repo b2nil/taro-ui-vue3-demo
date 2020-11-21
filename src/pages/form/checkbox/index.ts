@@ -2,7 +2,7 @@ import { h, defineComponent, reactive } from 'vue'
 import { AtCheckbox } from "taro-ui-vue3"
 import { CheckboxOption } from 'types/checkbox'
 import { View } from '@tarojs/components'
-import { Page, Panel, ExampleItem } from '@/components/demo-page'
+import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 interface IndexState {

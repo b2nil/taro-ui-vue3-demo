@@ -101,7 +101,7 @@
 <script lang='ts'>
 import { h, defineComponent } from "vue"
 import Taro from "@tarojs/taro"
-import { Page, Panel, ExampleItem } from '@/components/demo-page'
+import { Page, Panel, ExampleItem } from '@/components/index'
 import { AtIcon } from "taro-ui-vue3"
 import { AtCard } from "taro-ui-vue3"
 

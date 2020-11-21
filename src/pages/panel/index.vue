@@ -36,7 +36,7 @@
       </view>
     </view>
 
-    <nav-btn
+    <nav-button
       to="back"
       btn-icon="chevron-left"
     />
@@ -46,7 +46,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, onMounted, computed, toRefs } from "vue"
-import { NavBtn } from "@/components/demo-page"
+import { NavButton } from "@/components/index"
 import Taro from "@tarojs/taro"
 import iconAction from '@/assets/images/icon-list-action.png'
 import iconBasic from '@/assets/images/icon-list-basic.png'
@@ -62,7 +62,7 @@ export default defineComponent({
   name: "PanelDemo",
 
   components: {
-    NavBtn
+    NavButton
   },
 
   setup() {
@@ -317,8 +317,12 @@ export default defineComponent({
           },
           {
             id: 'Virtual-Scroll',
-            name: '长列表'
-          }
+            name: '虚拟列表'
+          },
+          {
+            id: 'Skeleton',
+            name: '骨架'
+          },
         ]
       },
       currentId: ''

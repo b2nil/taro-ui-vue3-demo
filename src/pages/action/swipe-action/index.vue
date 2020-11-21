@@ -122,7 +122,9 @@
           <at-swipe-action :options="OPTIONS">
             <at-list-item title="Item2" />
           </at-swipe-action>
-          <at-swipe-action :options="[{text: '警告', style: { backgroundColor: '#FFC82C' }}]">
+          <at-swipe-action
+            :options="[{text: '警告', style: { backgroundColor: '#FFC82C' }}]"
+          >
             <at-list-item title="Item3" />
           </at-swipe-action>
         </at-list>
@@ -159,7 +161,7 @@ import { AtButton } from "taro-ui-vue3"
 import { AtList } from "taro-ui-vue3"
 import { AtListItem } from "taro-ui-vue3"
 import { AtSwipeAction } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 

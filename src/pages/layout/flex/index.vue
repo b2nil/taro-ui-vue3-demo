@@ -151,7 +151,7 @@
 import { defineComponent } from "vue"
 import { AtFlex } from "taro-ui-vue3"
 import { AtFlexItem } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 

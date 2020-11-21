@@ -119,7 +119,7 @@ import { AtModal } from "taro-ui-vue3"
 import { AtModalAction } from "taro-ui-vue3"
 import { AtModalContent } from "taro-ui-vue3"
 import { AtModalHeader } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 import mockData from '../../navigation/indexes/mock-data'
 
 export default defineComponent({

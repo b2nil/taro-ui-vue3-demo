@@ -28,7 +28,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue"
 import { AtIcon } from "taro-ui-vue3"
-import { Page, Panel } from "@/components/demo-page"
+import { Page, Panel } from "@/components/index"
 import ICONS from "./icons"
 
 import "./index.scss"

@@ -2,7 +2,7 @@ import { h, defineComponent, reactive } from 'vue'
 import { AtSearchBar } from "taro-ui-vue3"
 import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { Page, Panel } from '@/components/demo-page'
+import { Page, Panel } from '@/components/index'
 import './index.scss'
 
 interface IndexState {
@@ -44,7 +44,7 @@ export default defineComponent({
                     h(AtSearchBar, {
                       value: state.value1,
                       onChange: (e) => onChange('value1', e),
-                      onActionClick: onActionClick.bind(this, 'value1'),
+                      onActionClick: onActionClick.bind(this, 'value1')
                     })
                   ]
                 }),

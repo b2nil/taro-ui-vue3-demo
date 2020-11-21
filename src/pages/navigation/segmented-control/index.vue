@@ -47,7 +47,7 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs, ref } from "vue"
 import { AtSegmentedControl } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/demo-page'
+import { Page, Panel, ExampleItem } from '@/components/index'
 
 import "./index.scss"
 

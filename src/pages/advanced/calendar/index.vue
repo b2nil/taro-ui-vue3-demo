@@ -103,7 +103,7 @@ import { ref, computed, reactive, toRefs, onMounted, onBeforeMount } from 'vue'
 import Taro from '@tarojs/taro'
 
 import { AtButton, AtCalendar, AtFlex, AtFlexItem } from "taro-ui-vue3"
-import { Page, Panel } from '@/components/demo-page'
+import { Page, Panel } from '@/components/index'
 
 import "./index.scss"
 

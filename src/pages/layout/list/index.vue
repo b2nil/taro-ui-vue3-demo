@@ -164,7 +164,7 @@ import { defineComponent } from "vue"
 import Taro from "@tarojs/taro"
 import { AtList } from "taro-ui-vue3"
 import { AtListItem } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 
 export default defineComponent({
   name: "ListDemo",

@@ -326,7 +326,7 @@ import Taro from "@tarojs/taro"
 import { AtButton } from "taro-ui-vue3"
 import { AtFab } from "taro-ui-vue3"
 import { AtForm } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/demo-page"
+import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 
