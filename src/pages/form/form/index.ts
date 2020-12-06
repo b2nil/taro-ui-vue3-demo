@@ -1,6 +1,6 @@
 import { h, defineComponent, reactive } from 'vue'
 import { AtButton, AtCheckbox, AtForm, AtInput, AtToast } from "taro-ui-vue3"
-import { CheckboxOption } from 'types/checkbox'
+import { CheckboxOption } from 'taro-ui-vue3/types/checkbox'
 import { View } from '@tarojs/components'
 import { Page, Panel } from '@/components/index'
 import './index.scss'
