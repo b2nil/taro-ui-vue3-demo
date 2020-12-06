@@ -209,7 +209,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs } from 'vue'
+import { defineComponent, reactive, computed, toRefs } from 'vue'
 import Taro from '@tarojs/taro'
 
 import { AtForm, AtInput } from "taro-ui-vue3"
