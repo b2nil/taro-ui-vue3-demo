@@ -144,11 +144,7 @@ const config = {
       filename: 'js/[name].[hash:8].js',
       chunkFilename: 'js/[name].[chunkhash:8].js'
     },
-    optimization: {
-      splitChunks: {
-        chunks: 'all',
-      },
-    },
+    chunkDirectory: 'chunks',
     router: {
       mode: 'hash',
       basename: '/',
@@ -168,6 +164,30 @@ const config = {
         }
       }
     },
+    sassLoaderOption: {
+      implementation: require("sass"),
+      sassOptions: {
+        outputStyle: "compressed",
+      },
+      sourceMap: false,
+    },
+    enableExtract: true,
+    miniCssExtractPluginOption: {
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[id].css'
+    },
+    imageUrlLoaderOption: {
+      limit: true,
+      encoding: true,
+      mimetype: 'image/png',
+      esModule: true
+    },
+    fontUrlLoaderOption: {
+      limit: true,
+      encoding: true,
+      mimetype: true,
+      esModule: true
+    },
     webpackChain(chain) {
       chain.resolve.alias
         .set(
@@ -176,10 +196,12 @@ const config = {
         )
 
       chain.merge({
-        plugin: {
-          install: {
-            plugin: BundleAnalyzerPlugin,
+        optimization: {
+          splitChunks: {
+            chunks: 'all',
           },
+          usedExports: true,
+          minimize: true
         },
         module: {
           rules: [
@@ -188,7 +210,12 @@ const config = {
               sideEffects: false
             }
           ]
-        }
+        },
+        plugin: {
+          install: {
+            plugin: BundleAnalyzerPlugin,
+          },
+        },
       })
     }
   }

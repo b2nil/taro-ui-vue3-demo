@@ -4,6 +4,21 @@ module.exports = {
   },
   defineConstants: {
   },
+  terser: {
+    enable: true,
+    config: {
+      compress: {
+        arrows: true,
+      },
+      module: false
+    }
+  },
+  csso: {
+    enable: true,
+    config: {
+      comments: false
+    }
+  },
   mini: {
     webpackChain(chain) {
       chain.plugin('analyzer')
@@ -11,9 +26,45 @@ module.exports = {
     }
   },
   h5: {
+    sassLoaderOption: {
+      implementation: require("sass"),
+      sassOptions: {
+        outputStyle: "compressed",
+      },
+      sourceMap: false,
+    },
+    styleLoaderOption: {
+      esModule: true,
+      insert: 'head'
+    },
+    enableExtract: true,
+    miniCssExtractPluginOption: {
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[id].css'
+    },
+    imageUrlLoaderOption: {
+      limit: true,
+      encoding: true,
+      mimetype: 'image/png',
+      esModule: true
+    },
+    fontUrlLoaderOption: {
+      limit: true,
+      encoding: true,
+      mimetype: true,
+      esModule: true
+    },
     webpackChain(chain) {
       chain.plugin('analyzer')
         .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
+
+      chain.merge({
+        mode: 'production',
+        optimization: {
+          usedExports: true,
+          minimize: true
+        }
+      })
 
       chain.resolve.alias
         .set(
