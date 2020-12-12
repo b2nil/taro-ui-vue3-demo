@@ -117,23 +117,6 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    },
-    webpackChain(chain) {
-      chain.merge({
-        plugin: {
-          install: {
-            plugin: BundleAnalyzerPlugin,
-          },
-        },
-        module: {
-          rules: [
-            {
-              include: path.resolve('node_modules', 'taro-ui-vue3'),
-              sideEffects: false
-            }
-          ]
-        }
-      })
     }
   },
   h5: {
@@ -164,13 +147,6 @@ const config = {
         }
       }
     },
-    sassLoaderOption: {
-      implementation: require("sass"),
-      sassOptions: {
-        outputStyle: "compressed",
-      },
-      sourceMap: false,
-    },
     enableExtract: true,
     miniCssExtractPluginOption: {
       filename: 'css/[name].css',
@@ -189,13 +165,12 @@ const config = {
       esModule: true
     },
     webpackChain(chain) {
-      chain.resolve.alias
-        .set(
-          '@tarojs/components$',
-          '@tarojs/components/dist-h5/vue3/index.js'
-        )
-
       chain.merge({
+        resolve: {
+          alias: {
+            '@tarojs/components$': '@tarojs/components/dist-h5/vue3/index.js'
+          }
+        },
         optimization: {
           splitChunks: {
             chunks: 'all',
@@ -210,12 +185,7 @@ const config = {
               sideEffects: false
             }
           ]
-        },
-        plugin: {
-          install: {
-            plugin: BundleAnalyzerPlugin,
-          },
-        },
+        }
       })
     }
   }

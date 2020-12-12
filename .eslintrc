@@ -1,3 +1,5 @@
 {
-  'extends': ['taro/vue3']
+  "extends": [
+    "taro/vue3"
+  ]
 }

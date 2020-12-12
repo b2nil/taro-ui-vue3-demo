@@ -26,13 +26,6 @@ module.exports = {
     }
   },
   h5: {
-    sassLoaderOption: {
-      implementation: require("sass"),
-      sassOptions: {
-        outputStyle: "compressed",
-      },
-      sourceMap: false,
-    },
     styleLoaderOption: {
       esModule: true,
       insert: 'head'
