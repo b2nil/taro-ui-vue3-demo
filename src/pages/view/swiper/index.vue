@@ -20,12 +20,12 @@
             v-for="(item, idx) in imgUrls"
             :key="idx"
           >
-            <SwiperItem>
+            <swiper-item>
               <image
                 :src="item"
                 class="slide-image"
               />
-            </SwiperItem>
+            </swiper-item>
           </template>
         </swiper>
 
@@ -93,10 +93,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
-import { AtList, AtListItem } from "taro-ui-vue3"
-import { Swiper, SwiperItem } from '@tarojs/components'
 import { CommonEvent } from '@tarojs/components/types/common'
-import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 interface SwiperPageState {
@@ -112,14 +109,7 @@ interface SwiperPageState {
 export default defineComponent({
   name: "SwiperDemo",
 
-  components: {
-    AtList, AtListItem,
-    Page, Panel, ExampleItem,
-    Swiper, SwiperItem
-  },
-
   setup() {
-
     const state = reactive<SwiperPageState>({
       current: 1,
       duration: 500,

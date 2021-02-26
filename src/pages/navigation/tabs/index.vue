@@ -108,20 +108,11 @@
 
 <script lang="ts">
 import { defineComponent, reactive, ref, toRefs } from "vue"
-import { AtTabs, AtTabsPane } from "taro-ui-vue3"
-import { Page, Panel } from '@/components/index'
 
 import "./index.scss"
 
 export default defineComponent({
   name: "TabsDemo",
-
-  components: {
-    AtTabs,
-    AtTabsPane,
-    Page,
-    Panel
-  },
 
   setup() {
     const state = reactive({

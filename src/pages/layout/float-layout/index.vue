@@ -95,20 +95,9 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from "vue"
 import Taro from '@tarojs/taro'
-import { AtButton } from "taro-ui-vue3"
-import { AtFloatLayout } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/index"
 
 export default defineComponent({
   name: "FloatLayoutDemo",
-
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtButton,
-    AtFloatLayout,
-  },
 
   setup() {
     const state = reactive({

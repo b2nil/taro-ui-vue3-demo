@@ -149,21 +149,10 @@
 
 <script lang="ts">
 import { defineComponent } from "vue"
-import { AtFlex } from "taro-ui-vue3"
-import { AtFlexItem } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 
 export default defineComponent({
-  name: "FlexDemo",
-
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtFlex,
-    AtFlexItem
-  }
+  name: "FlexDemo"
 })
 </script>

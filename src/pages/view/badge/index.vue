@@ -1,10 +1,10 @@
 <template>
   <page header-title="Badge 徽标">
-    <template v-for="(panel, i) in panels" :key="i">
-      <panel
-        :title="panel.title"
-        
-      >
+    <template
+      v-for="(panel, i) in panels"
+      :key="i"
+    >
+      <panel :title="panel.title">
         <view class="badge-item">
           <view class="subitem">
             <at-badge v-bind="panel.attrs">
@@ -27,19 +27,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { AtBadge, AtButton } from "taro-ui-vue3"
-import { Page, Panel } from '@/components/index'
 import './index.scss'
 
 export default defineComponent({
   name: "BadgeDemo",
-
-  components: {
-    AtBadge,
-    AtButton,
-    Page,
-    Panel
-  },
 
   setup() {
     const panels = [

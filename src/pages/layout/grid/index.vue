@@ -45,18 +45,9 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import Taro from '@tarojs/taro'
-import { AtGrid } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/index'
 
 export default defineComponent({
   name: "GridDemo",
-
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtGrid
-  },
 
   setup() {
     const data = ref([

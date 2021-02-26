@@ -19,14 +19,9 @@
 <script lang="ts">
 import { computed, defineComponent, PropType, toRefs } from 'vue'
 import Taro from "@tarojs/taro"
-import { AtFab } from "taro-ui-vue3"
 
 export default defineComponent({
   name: 'NavButton',
-
-  components: {
-    AtFab
-  },
 
   props: {
     to: {

@@ -72,24 +72,11 @@
 import { defineComponent, reactive, toRefs } from 'vue'
 import Taro from '@tarojs/taro'
 
-import { AtActionSheet } from "taro-ui-vue3"
-import { AtActionSheetItem } from "taro-ui-vue3"
-import { AtButton } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/index'
 
 import './index.scss'
 
 export default defineComponent({
   name: 'ActionSheetDemo',
-
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtActionSheet,
-    AtActionSheetItem,
-    AtButton
-  },
 
   setup() {
     const state = reactive({

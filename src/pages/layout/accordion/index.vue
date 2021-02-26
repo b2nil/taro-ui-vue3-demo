@@ -112,22 +112,9 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from "vue"
-import { AtAccordion } from "taro-ui-vue3"
-import { AtList } from "taro-ui-vue3"
-import { AtListItem } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/index"
 
 export default defineComponent({
   name: "AccordionDemo",
-
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtAccordion,
-    AtList,
-    AtListItem
-  },
 
   setup() {
     const state = reactive({

@@ -75,21 +75,11 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs, computed } from "vue"
 import Taro from "@tarojs/taro"
-import { AtButton, AtPagination } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/index'
 
 import "./index.scss"
 
 export default defineComponent({
   name: "PaginationDemo",
-
-  components: {
-    AtButton,
-    AtPagination,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
 

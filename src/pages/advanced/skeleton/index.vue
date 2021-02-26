@@ -57,17 +57,6 @@ import {
 export default defineComponent({
   name: "SkeletonDemo",
 
-  components: {
-    AtSkeleton,
-    AtCard,
-    AtFlex,
-    AtFlexItem,
-    AtSwitch,
-    Page,
-    Panel,
-    ExampleItem
-  },
-
   setup() {
     const loading = ref(true)
 

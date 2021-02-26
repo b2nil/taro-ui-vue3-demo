@@ -210,34 +210,12 @@ import {
   AtSwipeAction,
   AtSearchBar,
 } from 'taro-ui-vue3'
-import { Page, Panel, ExampleItem, PropItem } from '@/components/index'
 
 import Taro from '@tarojs/taro'
 
 
 export default defineComponent({
   name: "VirtualScrollDemo",
-
-  components: {
-    AtFab,
-    AtFlex,
-    AtCard,
-    AtButton,
-    AtSlider,
-    AtDivider,
-    AtSwitch,
-    AtFlexItem,
-    AtListItem,
-    AtLoadMore,
-    AtInputNumber,
-    AtVirtualScroll,
-    AtSwipeAction,
-    AtSearchBar,
-    Page,
-    Panel,
-    ExampleItem,
-    PropItem
-  },
 
   setup() {
     const benched = ref(5)

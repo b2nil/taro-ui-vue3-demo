@@ -99,25 +99,14 @@
 </template>
 
 <script lang='ts'>
-import { h, defineComponent } from "vue"
+import { defineComponent, h, resolveComponent } from "vue"
 import Taro from "@tarojs/taro"
-import { Page, Panel, ExampleItem } from '@/components/index'
-import { AtIcon } from "taro-ui-vue3"
-import { AtCard } from "taro-ui-vue3"
 
 export default defineComponent({
   name: "CardDemo",
 
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtCard,
-    AtIcon
-  },
-
   setup() {
-    const renderIcon = h(AtIcon, {
+    const renderIcon = h(resolveComponent('at-icon'), {
       prefixClass: 'at-icon',
       value: 'home',
       size: 16,

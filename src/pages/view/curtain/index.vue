@@ -31,12 +31,9 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
-import { AtButton, AtCurtain } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/index'
-
+import curtainPng from '@/assets/images/curtain.png'
 import './index.scss'
 
-const curtainPng = require('@/assets/images/curtain.png')
 
 interface TagPageState {
   isOpened: boolean
@@ -52,14 +49,6 @@ interface TagPageState {
 
 export default defineComponent({
   name: "CurtainDemo",
-
-  components: {
-    AtButton,
-    AtCurtain,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
 

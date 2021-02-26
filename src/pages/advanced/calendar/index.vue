@@ -101,21 +101,10 @@
 <script>
 import { ref, computed, reactive, toRefs, onMounted, onBeforeMount } from 'vue'
 import Taro from '@tarojs/taro'
-
-import { AtButton, AtCalendar, AtFlex, AtFlexItem } from "taro-ui-vue3"
-import { Page, Panel } from '@/components/index'
-
 import "./index.scss"
 
 export default {
-  components: {
-    AtButton,
-    AtCalendar,
-    AtFlex,
-    AtFlexItem,
-    Page,
-    Panel
-  },
+  name: "CalendarDemo",
 
   setup() {
     const state = reactive({

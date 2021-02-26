@@ -49,14 +49,9 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { Page, Panel } from '@/components/index'
 import './index.scss'
 
 export default defineComponent({
-  name: "ArticleDemo",
-  components: {
-    Page,
-    Panel
-  }
+  name: "ArticleDemo"
 })
 </script>

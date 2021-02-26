@@ -26,19 +26,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { AtDivider, AtIcon } from "taro-ui-vue3"
-import { Page, Panel } from '@/components/index'
 import './index.scss'
 
 export default defineComponent({
   name: "DividerDemo",
-
-  components: {
-    AtDivider,
-    AtIcon,
-    Page,
-    Panel
-  },
 
   setup() {
 

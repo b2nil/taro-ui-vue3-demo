@@ -57,19 +57,10 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { AtSwitch } from 'taro-ui-vue3'
-import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 export default defineComponent({
   name: "SwitchDemo",
-
-  components: {
-    AtSwitch,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
     const switchValue = ref(true)

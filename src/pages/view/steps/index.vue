@@ -62,9 +62,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, ref, toRefs } from 'vue'
-import { AtSteps } from "taro-ui-vue3"
 import { Item } from 'taro-ui-vue3/types/steps'
-import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 interface TimelinePageState {
@@ -73,11 +71,6 @@ interface TimelinePageState {
 
 export default defineComponent({
   name: "StepsDemo",
-
-  components: {
-    AtSteps,
-    Page, Panel, ExampleItem
-  },
 
   setup() {
 

@@ -46,7 +46,6 @@
 
 <script lang="ts">
 import { defineComponent, reactive, onMounted, computed, toRefs } from "vue"
-import { NavButton } from "@/components/index"
 import Taro from "@tarojs/taro"
 import iconAction from '@/assets/images/icon-list-action.png'
 import iconBasic from '@/assets/images/icon-list-basic.png'
@@ -60,10 +59,6 @@ import "./index.scss"
 
 export default defineComponent({
   name: "PanelDemo",
-
-  components: {
-    NavButton
-  },
 
   setup() {
     const state = reactive({

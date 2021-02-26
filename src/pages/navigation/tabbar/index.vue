@@ -61,20 +61,11 @@
 
 <script lang="ts">
 import { defineComponent, reactive, ref, toRefs } from "vue"
-import { AtTabBar } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/index'
 
 import "./index.scss"
 
 export default defineComponent({
   name: "TabbarDemo",
-
-  components: {
-    AtTabBar,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
 

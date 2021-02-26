@@ -9232,10 +9232,10 @@ tar@^6.0.2:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-taro-ui-vue3@^1.0.0-alpha.17:
-  version "1.0.0-alpha.17"
-  resolved "https://registry.yarnpkg.com/taro-ui-vue3/-/taro-ui-vue3-1.0.0-alpha.17.tgz#1a3015c9b6630ac466b391a86af0744a24243f2d"
-  integrity sha512-mAi4l56PFfSjQNncbYjiYOLwZKG1ojG9XekMo99eU9J9SFQyENIQSeCxva9CGET9zmvXnpQXrckkTQ8QI3LUNg==
+taro-ui-vue3@1.0.0-alpha.18:
+  version "1.0.0-alpha.18"
+  resolved "https://registry.npmjs.org/taro-ui-vue3/-/taro-ui-vue3-1.0.0-alpha.18.tgz#b716f993761bcec7cdee37b6fc445d4d0e2559a9"
+  integrity sha512-Fa0cX6JIqwA1R+Vih/VXCnBKCbr1nUN+POSAxqHaflipn0TtjHFfCym88NPpO+kezIMRIdGx61R/rdAFOuzWBA==
   dependencies:
     dayjs "^1.8.29"
     lodash-es "^4.17.15"

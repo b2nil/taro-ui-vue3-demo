@@ -33,22 +33,11 @@
 <script>
 import { defineComponent } from "vue"
 import Taro from "@tarojs/taro"
-import { AtButton } from "taro-ui-vue3"
-import { AtMessage } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 
 export default defineComponent({
   name: "MessageDemo",
-
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtButton,
-    AtMessage,
-  },
 
   setup() {
     function handleClick(type) {

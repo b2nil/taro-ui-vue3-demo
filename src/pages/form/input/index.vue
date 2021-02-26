@@ -211,22 +211,11 @@
 <script lang="ts">
 import { defineComponent, reactive, computed, toRefs } from 'vue'
 import Taro from '@tarojs/taro'
-
-import { AtForm, AtInput } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/index"
 import verificationCode from '@/assets/images/verification_code.png'
 import './index.scss'
 
 export default defineComponent({
   name: "InputDemo",
-
-  components: {
-    AtForm,
-    AtInput,
-    Page,
-    Panel,
-    ExampleItem,
-  },
 
   setup() {
     const state = reactive({

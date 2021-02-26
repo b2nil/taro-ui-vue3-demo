@@ -128,20 +128,11 @@
 
 <script lang="ts">
 import { defineComponent, computed } from "vue"
-import { AtAvatar } from "taro-ui-vue3"
 import Taro from "@tarojs/taro"
-import { Page, Panel, ExampleItem } from "@/components/index"
 import "./index.scss"
 
 export default defineComponent({
   name: "AvatarDemo",
-
-  components: {
-    AtAvatar,
-    Page,
-    Panel,
-    ExampleItem,
-  },
 
   setup() {
     const avatarImg =

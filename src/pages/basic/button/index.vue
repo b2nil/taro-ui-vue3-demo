@@ -323,24 +323,11 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from "vue"
 import Taro from "@tarojs/taro"
-import { AtButton } from "taro-ui-vue3"
-import { AtFab } from "taro-ui-vue3"
-import { AtForm } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 
 export default defineComponent({
   name: "ButtonDemo",
-
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtButton,
-    AtFab,
-    AtForm
-  },
 
   setup() {
 

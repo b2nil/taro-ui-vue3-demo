@@ -89,22 +89,11 @@
 
 <script>
 import { reactive, toRefs } from 'vue'
-import { AtButton } from "taro-ui-vue3"
-import { AtToast } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/index"
 
 import "./index.scss"
 
 export default {
   name: 'ToastDemo',
-
-  components: {
-    AtButton,
-    AtToast,
-    Page,
-    Panel,
-    ExampleItem,
-  },
 
   setup() {
     const state = reactive({

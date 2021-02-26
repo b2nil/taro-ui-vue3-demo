@@ -50,7 +50,10 @@
         </at-modal-content>
         <at-modal-action>
           <button @tap="closeModal(1, '点击了取消')">取消</button>
-          <button @tap="closeModal(1, '点击了确定')">确定</button>
+          <button
+            @tap="closeModal(1, '点击了确定')"
+            style="margin-top: 0;"
+          >确定</button>
         </at-modal-action>
       </at-modal>
 
@@ -113,29 +116,10 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from "vue"
 import Taro from "@tarojs/taro"
-import { AtButton } from "taro-ui-vue3"
-import { AtIndexes } from "taro-ui-vue3"
-import { AtModal } from "taro-ui-vue3"
-import { AtModalAction } from "taro-ui-vue3"
-import { AtModalContent } from "taro-ui-vue3"
-import { AtModalHeader } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from "@/components/index"
 import mockData from '../../navigation/indexes/mock-data'
 
 export default defineComponent({
   name: "ModalDemo",
-
-  components: {
-    Page,
-    Panel,
-    ExampleItem,
-    AtButton,
-    AtIndexes,
-    AtModal,
-    AtModalAction,
-    AtModalContent,
-    AtModalHeader
-  },
 
   setup() {
     const state = reactive({

@@ -100,8 +100,6 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
-import { AtInputNumber } from 'taro-ui-vue3'
-import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 interface IndexState {
@@ -110,13 +108,6 @@ interface IndexState {
 
 export default defineComponent({
   name: "InputNumberDemo",
-
-  components: {
-    AtInputNumber,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
 

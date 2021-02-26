@@ -15,7 +15,6 @@
 
 <script lang="ts">
 import { defineComponent, toRefs } from "vue"
-import { AtFlex, AtFlexItem } from "taro-ui-vue3"
 
 export default defineComponent({
   name: "PropItem",
@@ -23,11 +22,6 @@ export default defineComponent({
   props: {
     prop: String,
     desc: String
-  },
-
-  components: {
-    AtFlex,
-    AtFlexItem
   },
 
   setup(props) {

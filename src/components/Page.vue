@@ -32,14 +32,9 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, ref, toRefs } from "vue"
 import Taro from "@tarojs/taro"
-import NavButton from "./NavButton.vue"
 
 export default defineComponent({
   name: "Page",
-
-  components: {
-    NavButton
-  },
 
   props: {
     headerTitle: {
@@ -113,7 +108,7 @@ export default defineComponent({
     font-weight: bold;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: 0;
@@ -147,7 +142,7 @@ export default defineComponent({
       line-height: 1.5;
 
       &::before {
-        content: '';
+        content: "";
         display: inline-block;
         position: absolute;
         left: 24px;

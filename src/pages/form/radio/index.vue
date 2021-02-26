@@ -55,9 +55,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
-import { AtRadio } from 'taro-ui-vue3'
 import { RadioOption } from 'types/radio'
-import { Page, Panel } from '@/components/index'
 import './index.scss'
 
 interface IndexState {
@@ -72,12 +70,6 @@ interface IndexState {
 export default defineComponent({
 
   name: "RadioDemo",
-
-  components: {
-    AtRadio,
-    Page,
-    Panel
-  },
 
   setup() {
 

@@ -25,20 +25,12 @@
 </template>
 
 <script lang="ts">
-import { h, defineComponent, resolveComponent } from 'vue'
-import { AtCountdown } from "taro-ui-vue3"
+import { defineComponent, resolveComponent } from 'vue'
 import Taro from '@tarojs/taro'
-import { Page, Panel } from '@/components/index'
 import './index.scss'
 
 export default defineComponent({
   name: "CountdownDemo",
-
-  components: {
-    AtCountdown,
-    Page,
-    Panel
-  },
 
   setup() {
 

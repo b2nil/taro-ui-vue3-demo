@@ -27,20 +27,12 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue"
-import { AtIcon } from "taro-ui-vue3"
-import { Page, Panel } from "@/components/index"
 import ICONS from "./icons"
 
 import "./index.scss"
 
 export default defineComponent({
   name: "IconDemo",
-
-  components: {
-    Page,
-    Panel,
-    AtIcon
-  },
 
   setup() {
     const icons = ref(ICONS)

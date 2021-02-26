@@ -26,20 +26,12 @@
 </template>
 
 <script lang="ts">
-import { h, defineComponent, resolveComponent } from 'vue'
-import { AtNoticebar } from "taro-ui-vue3"
+import { defineComponent } from 'vue'
 import Taro from '@tarojs/taro'
-import { Page, Panel } from '@/components/index'
 import './index.scss'
 
 export default defineComponent({
   name: "NoticebarDemo",
-
-  components: {
-    AtNoticebar,
-    Page,
-    Panel
-  },
 
   setup() {
 

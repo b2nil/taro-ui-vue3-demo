@@ -76,22 +76,10 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs, computed } from "vue"
 import Taro from "@tarojs/taro"
-import { AtBadge, AtButton, AtDrawer, AtIcon } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/index'
 
 import "./index.scss"
 
 export default defineComponent({
-
-  components: {
-    AtBadge,
-    AtButton,
-    AtDrawer,
-    AtIcon,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
     const state = reactive({

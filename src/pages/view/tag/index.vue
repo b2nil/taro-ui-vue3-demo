@@ -168,9 +168,7 @@
 
 <script lang="ts">
 import Taro from '@tarojs/taro'
-import { AtTag } from "taro-ui-vue3"
 import { defineComponent, reactive, toRefs } from 'vue'
-import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 type ListItem = {
@@ -188,13 +186,6 @@ interface TagPageState {
 
 export default defineComponent({
   name: "TagDemo",
-
-  components: {
-    AtTag,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
 

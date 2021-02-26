@@ -63,9 +63,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs } from 'vue'
-import { AtCheckbox } from 'taro-ui-vue3'
 import { CheckboxOption } from 'taro-ui-vue3/types/checkbox'
-import { Page, Panel, ExampleItem } from '@/components/index'
 import './index.scss'
 
 interface IndexState {
@@ -81,13 +79,6 @@ interface IndexState {
 
 export default defineComponent({
   name: "CheckboxDemo",
-
-  components: {
-    AtCheckbox,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
 

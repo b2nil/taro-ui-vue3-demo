@@ -23,20 +23,11 @@
 </template>
 
 <script lang="ts">
-import { h, defineComponent } from 'vue'
-import { AtTimeline } from "taro-ui-vue3"
-import { Page, Panel, ExampleItem } from '@/components/index'
+import { defineComponent } from 'vue'
 import './index.scss'
 
 export default defineComponent({
   name: "TimelineDemo",
-
-  components: {
-    AtTimeline,
-    Page,
-    Panel,
-    ExampleItem
-  },
 
   setup() {
     const data = [
