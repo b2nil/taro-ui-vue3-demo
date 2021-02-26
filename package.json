@@ -1,6 +1,6 @@
 {
   "name": "taro-ui-vue3-demo",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.18",
   "private": true,
   "description": "A demo showcase of taro-ui-vue3",
   "templateInfo": {
